@@ -8,10 +8,10 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
+      port: 5432,
       database: 'pet_furriendly_db',
       user:     'postgres',
-      password: 'Turing2301',
-      port: 5432
+      password: 'Turing2301'
     }
   },
 
