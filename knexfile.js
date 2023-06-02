@@ -11,7 +11,7 @@ module.exports = {
       port: 5432,
       database: 'pet_furriendly_db',
       user:     'postgres',
-      password: 'Dinglebop22'
+      password: 'Turing2301'
     }
   },
 
@@ -34,8 +34,7 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      // connectionString: process.env.DATABASE_URL,
-      connectionString: 'postgresql://postgres:Dinglebop22@localhost:5432/pet_furriendly_db',
+      connectionString: process.env.DATABASE_URL,
       ssl: {
         rejectUnauthorized: false
       },
