@@ -11,7 +11,7 @@ module.exports = {
       port: 5432,
       database: 'pet_furriendly_db',
       user:     'postgres',
-      password: 'Turing2301'
+      password: 'Dinglebop22'
     }
   },
 
