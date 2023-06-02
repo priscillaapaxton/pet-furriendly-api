@@ -4,37 +4,22 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 module.exports = {
-
-  development: {
-    client: 'pg',
-    connection: {
-      port: 5432,
-      database: 'pet_furriendly_db',
-      user:     'postgres',
-      password: 'Turing2301'
-    }
-  },
-
-  // staging: {
-  //   client: 'postgresql',
+  // FOR LOCAL DEVELOPMENT
+  // development: {
+  //   client: 'pg',
   //   connection: {
-  //     database: 'my_db',
-  //     user:     'username',
-  //     password: 'password'
-  //   },
-  //   pool: {
-  //     min: 2,
-  //     max: 10
-  //   },
-  //   migrations: {
-  //     tableName: 'knex_migrations'
+  //     port: 5432,
+  //     database: 'pet_furriendly_db',
+  //     user:     'postgres',
+  //     password: 'Turing2301'
   //   }
   // },
 
-  production: {
-    client: 'postgresql',
+  // FOR DEPLOYING THRU RENDER
+  development: {
+    client: 'pg',
     connection: {
-      connectionString: process.env.DATABASE_URL,
+      connectionString: 'postgres://postgres1:6VgF2qZGkAhiKpRmWC7nttNhKHpOPdb7@dpg-chslik2k728ud3k0vnig-a.oregon-postgres.render.com/pet_furriendly_db',
       ssl: {
         rejectUnauthorized: false
       },
@@ -44,8 +29,24 @@ module.exports = {
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      directory: './migrations'
+    },
+  },
+
+  production: {
+    client: 'pg',
+    connection: {
+      connectionString: 'postgres://postgres1:6VgF2qZGkAhiKpRmWC7nttNhKHpOPdb7@dpg-chslik2k728ud3k0vnig-a.oregon-postgres.render.com/pet_furriendly_db',
+      ssl: {
+        rejectUnauthorized: false
+      },
+    },
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      directory: './migrations'
     }
   }
-
 };
