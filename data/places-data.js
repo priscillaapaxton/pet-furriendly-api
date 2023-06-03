@@ -116,7 +116,7 @@ const places = [
     rating: "4",
     website: "http://www.wildflowershome.com/",
     description: "Locally-owned gift shop specializing in garden-themed accessories, plants, bath products, candles & other household products. Well-behaved dogs are allowed in the store.",
-    src: "http://www.wildflowershome.com/wp-content/uploads/2018/01/10-Wild-Flowers-Denver-and-Stapelton-About-Wild-Flowers-Home-Garden-Gifts-1.jpg",
+    src: "https://www.thedenverear.com/wp-content/uploads/2020/01/Little-Lula-Rose-744x558.png",
     alt: "gift shop with a variety of household items on display"
   },
   {
